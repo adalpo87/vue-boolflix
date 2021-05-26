@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~@fontsource/roboto/index.css';
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
