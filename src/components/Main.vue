@@ -1,23 +1,39 @@
 <template>
+<main>
 <div class="container mt-5">
-    <ul>
-         <li>{{ movie.title }}</li>
-         <li>{{ movie.original_title }}</li>
-         <li>{{ movie.original_language }}</li>
-         <li>{{ movie.vote_average }}</li>
-    </ul>
+    <h1>{{titles[type]}}</h1>
+        {{ list.length }}
+    <Card
+    v-for="card in list" :key="card.id"
+    :card="card"
+    />
 </div>
+</main>
 </template>
 
 <script>
+import Card from '@/components/Card';
 export default {
     name: 'Main',
+    components:{
+        Card,
+    },
     props:{
-        movie: Object,
+        type: String,
+        list: Array
+    },
+data(){
+    return{
+        titles:{
+            'movie': 'Film trovati:',
+            'tv': 'Serie TV trovate:',
+            'all': 'Ecco tutti i risultati:',
+        }
     }
+}
 }
 </script>
 
 <style lang="scss" scoped>
-  
+ 
 </style>

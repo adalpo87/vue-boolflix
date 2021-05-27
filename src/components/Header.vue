@@ -3,23 +3,47 @@
      <div class="d-flex justify-content-center align-items-center">
          <h1>BOOLFLIX</h1>
     </div>
-    <div class="text-center mt-5">
-        <input 
-        v-model.trim= "searchMovie"
-        type="text">
+    
+ 
+  <div div class="container d-flex pt-3">
+      <div class="flex-grow-1 d-flex justify-content-center">
+          <input 
+          v-model.trim="textSearch"
+          placeholder="Cerca..."
+          class="form"
+          type="text" />
+        
         <button 
-        @click.prevent="$emit('searchMovie',searchMovie)"
-        class="ms-4">INVIA</button>
+        @click="$emit('startSearch',{text:textSearch, type:'movie'})"
+        class="btn btn-primary ms-3">CERCA FILM</button>
+        
+        
+        <button 
+        @click="$emit('startSearch',{text:textSearch, type:'tv'})"
+        class="btn btn-primary ms-3">CERCA SERIE</button>
+      
+       
+        <button 
+        @click="$emit('startSearch',{text:textSearch, type:'all'})"
+        class="btn btn-primary ms-3">CERCA TUTTO</button>
+              
+      </div>
     </div>
+
+
+
   </header>
 </template>
 
 <script>
 export default {
     name:'Header',
+components:{
+
+},
 data(){
     return{
-        searchMovie: "",
+        textSearch: '',
     }
 }
 }
@@ -27,13 +51,11 @@ data(){
 
 <style lang="scss" scoped>
     header{
-        height: 300px;
         div{
-            height: 30%;
             h1{
                 color: red;
+                font-size: 4rem;
             }
         }
-        
     }
 </style>

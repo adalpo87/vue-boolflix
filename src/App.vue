@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <Header @searchMovie= "this.searchMovies"/>
-    <Main 
-      v-for= "movie in movies" :key= "movie.id"
-      :movie = movie
-    />
+    <Header
+    @startSearch= startSearch
+     />
+    <Main v-if="results.movie.length > 0" type='movie' :list="results.movie" />
+    <Main v-if="results.tv.length > 0" type='tv' :list="results.tv" />
+    <Main v-if="results.all.length > 0" type='all' :list="results.all" />
 
   </div>
 </template>
@@ -21,32 +22,57 @@ export default {
 },
 data(){
   return{
-        apiUrl:"https://api.themoviedb.org/3/search/movie",
-        apiKey: '4df959eab3283b1ac2c5a67b1e5247b9',
-        query:"",
+        apiUrl:"https://api.themoviedb.org/3/search/",
+        apiKey: "54208a98ced9879b596671aca0f2b73b",
         language:"it-IT",
-        movies:[]
+  
+        results:{ 
+            'movie':[],
+            'tv':[],
+            'all':[]
+        }
   }
 },
 methods:{
-  searchMovies(query){
-      this.query = query;
-        axios.get(this.apiUrl,{
-          params:{
-                  api_key: this.apiKey,
-                  query: this.query,
-                  language: this.language
-                 }
-        })
-      .then(resp => {
-            this.movies = resp.data.results;
-            console.log(this.movies);
-        })
-      .catch(err => {
-            console.log(err);
-        })
-      }
+
+  startSearch(obj){
+    this.resetResult();
+    if(obj.type === 'all'){
+      this.getApi(obj.text, 'movie')
+      this.getApi(obj.text, 'tv')
+    }else{
+      this.getApi(obj.text, obj.type)
     }
+    this.movie = this.startSearch
+    console.log(this.movie)
+  },
+
+  resetResult(){
+    this.results.movie = [];
+    this.results.tv= [];
+    this.results.all= [];
+  },
+
+   getApi(query, type){
+     axios.get(this.apiUrl+type,{
+       params:{
+         api_key: this.apiKey,
+         query: query,
+         language: this.language
+       }
+     })
+    .then(res=> {
+      this.results[type] = res.data.results;
+      console.log(res.data);
+    })
+    .catch(err=> {
+      console.log(err);
+    })
+   }
+},
+created(){
+  
+},
 }
 
 </script>
