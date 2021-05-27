@@ -1,13 +1,13 @@
 <template>
 <main>
-<div class="container mt-5">
+
     <h1>{{titles[type]}}</h1>
         {{ list.length }}
-    <Card class="d-flex"
+    <Card
     v-for="card in list" :key="card.id"
     :card="card"
     />
-</div>
+
 </main>
 </template>
 
@@ -35,5 +35,7 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-  
+    main{
+       
+    }
 </style>
