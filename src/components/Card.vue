@@ -1,12 +1,14 @@
 <template>
+
   <div>
-        <ul class="mb-3">
-            <li >{{ card.title}}</li>
-            <li >{{ card.original_title  || card.original_name}}</li>
-            <li v-if="card.original_language.length > 0"><img :src="flagLang(card)" :alt="card.title"></li>
-            <li >{{ card.vote_average }}</li>
+        <ul>
+            <li>{{ card.title}}</li>
+            <li>{{ card.original_title  || card.original_name}}</li>
+            <li><img :src="flagLang(card)" :alt="card.title"></li>
+            <li>{{ card.vote_average }}</li>
         </ul>
   </div>
+
 </template>
 
 <script>
@@ -32,17 +34,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    div{
-
-        flex-direction: row;
-        ul{
-            padding: 20px;
-
-            li{
-                img{
-                    width: 35px;
-                }
-            }
-        }
-    }
+   div{
+       margin: 20px;
+       border: 1px solid black;
+       ul{
+           list-style: none;
+       }
+   }
 </style>

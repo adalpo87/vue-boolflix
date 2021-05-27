@@ -3,7 +3,7 @@
 <div class="container mt-5">
     <h1>{{titles[type]}}</h1>
         {{ list.length }}
-    <Card
+    <Card class="d-flex"
     v-for="card in list" :key="card.id"
     :card="card"
     />
@@ -35,5 +35,5 @@ data(){
 </script>
 
 <style lang="scss" scoped>
- 
+  
 </style>
