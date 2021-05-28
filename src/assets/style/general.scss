@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fontsource/roboto/index.css';
+$colorbrand: #141414;
 html {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: $colorbrand;
     color: white;
     font-family: 'Roboto', sans-serif;
 }

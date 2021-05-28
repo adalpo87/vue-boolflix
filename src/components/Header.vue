@@ -1,31 +1,31 @@
 <template>
-  <header>
+  <header class="d-flex justify-content-sm-between container align-items-sm-center">
      <div class="d-flex justify-content-center align-items-center">
          <h1>BOOLFLIX</h1>
     </div>
     
  
-  <div div class="container d-flex pt-3">
+  <div div class="">
       <div class="flex-grow-1 d-flex justify-content-center">
           <input 
           v-model.trim="textSearch"
-          placeholder="Cerca..."
+          placeholder="Cerca film o serie tv"
           class="form"
           type="text" />
         
         <button 
         @click="$emit('startSearch',{text:textSearch, type:'movie'})"
-        class="btn btn-primary ms-3">CERCA FILM</button>
+        class="ms-3">CERCA FILM</button>
         
         
         <button 
         @click="$emit('startSearch',{text:textSearch, type:'tv'})"
-        class="btn btn-primary ms-3">CERCA SERIE</button>
+        class="ms-3">CERCA SERIE</button>
       
        
         <button 
         @click="$emit('startSearch',{text:textSearch, type:'all'})"
-        class="btn btn-primary ms-3">CERCA TUTTO</button>
+        class="ms-3">CERCA TUTTO</button>
               
       </div>
     </div>
@@ -50,12 +50,6 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-    header{
-        div{
-            h1{
-                color: red;
-                font-size: 4rem;
-            }
-        }
-    }
+ @import '@/assets/style/header.scss';
+    
 </style>

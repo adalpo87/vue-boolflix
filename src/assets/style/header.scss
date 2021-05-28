@@ -1,0 +1,29 @@
+header {
+    height: 100px;
+    div {
+        h1 {
+            color: red;
+            font-weight: 800;
+        }
+    }
+    div {
+        div {
+            input {
+                background-color: #141414;
+                color: white;
+                border: 1px solid white;
+            }
+            button {
+                background-color: #141414;
+                border: none;
+                color: white;
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 576px) {}
+
+@media only all and (max-width: 768px) {}
+
+@media only all and (max-width: 1200px) {}
