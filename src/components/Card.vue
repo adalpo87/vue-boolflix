@@ -9,8 +9,15 @@
   <h4>{{ card.original_title  || card.original_name}}</h4>
 
   <h5><img :src="flagLang(card)" :alt="card.title"></h5>
+  
+  <h5>{{card.vote_average/2}}</h5>
 
-  <div class="star"><i v-for="index in Math.ceil(card.vote_average/2)" :key="index" class="fas fa-star"></i></div>
+  <div class="star">
+    
+    <i v-for="index in Math.ceil(card.vote_average/2)" :key="index" class="fas fa-star"></i>
+    <i v-for="index in Math.floor(5-card.vote_average/2)" :key="index" class="far fa-star"></i>
+
+  </div>
 
   </div>
 
@@ -42,7 +49,8 @@ export default {
         let sizePoster = "w342";
         return "https://image.tmdb.org/t/p/"+sizePoster+ posterURL;
       },
-    
+  
+
   }
 }
 </script>

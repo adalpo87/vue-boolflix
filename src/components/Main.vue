@@ -35,7 +35,5 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-    main{
-       
-    }
+   
 </style>
