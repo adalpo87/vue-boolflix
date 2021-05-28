@@ -7,23 +7,45 @@ header {
         }
     }
     div {
+        input {
+            background-color: #141414;
+            color: white;
+            border: 1px solid white;
+        }
+        button {
+            background-color: #141414;
+            border: none;
+            color: white;
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    header {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 30px;
+        h1 {
+            margin: 5px;
+        }
         div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             input {
-                background-color: #141414;
-                color: white;
-                border: 1px solid white;
+                width: 100%;
+                margin-bottom: 10px
             }
             button {
-                background-color: #141414;
-                border: none;
-                color: white;
+                width: 20%;
+                font-size: 0.6rem;
+                border: 1px solid white;
+                border-radius: 4px;
             }
         }
     }
 }
 
-@media only all and (max-width: 576px) {}
+@media all and (max-width: 768px) {}
 
-@media only all and (max-width: 768px) {}
-
-@media only all and (max-width: 1200px) {}
+@media all and (max-width: 1200px) {}

@@ -2,12 +2,13 @@
 <main>
 
     <h1>{{titles[type]}}</h1>
-        {{ list.length }}
+     <span> {{ list.length }} </span> 
+    <div class="main-card">
     <Card
     v-for="card in list" :key="card.id"
     :card="card"
     />
-
+    </div>
 </main>
 </template>
 
@@ -35,5 +36,6 @@ data(){
 </script>
 
 <style lang="scss" scoped>
-   
+ @import '@/assets/style/main.scss';   
+
 </style>

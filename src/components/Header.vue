@@ -1,12 +1,12 @@
 <template>
-  <header class="d-flex justify-content-sm-between container align-items-sm-center">
-     <div class="d-flex justify-content-center align-items-center">
+  <header>
+     <div>
          <h1>BOOLFLIX</h1>
     </div>
     
  
-  <div div class="">
-      <div class="flex-grow-1 d-flex justify-content-center">
+ 
+      <div>
           <input 
           v-model.trim="textSearch"
           placeholder="Cerca film o serie tv"
@@ -28,7 +28,7 @@
         class="ms-3">CERCA TUTTO</button>
               
       </div>
-    </div>
+   
 
 
 

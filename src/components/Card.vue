@@ -1,26 +1,28 @@
 <template>
 
-  <div class="text-center">
-
-  <div class="poster"><img :src="getPoster(card)" alt=""></div>
-
-  <h2>{{ card.title || card.name }}</h2>
-
-  <h4>{{ card.original_title  || card.original_name}}</h4>
-
-  <h5><img :src="flagLang(card)" :alt="card.title"></h5>
-  
-  <h5>{{card.vote_average/2}}</h5>
-
-  <div class="star">
-    
-    <i v-for="index in Math.ceil(card.vote_average/2)" :key="index" class="fas fa-star"></i>
-    <i v-for="index in Math.floor(5-card.vote_average/2)" :key="index" class="far fa-star"></i>
-
+ <div class="main-card">
+<!-- ------------------------------------------------- -->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <img class="poster" :src="getPoster(card)" alt="">
+    </div>
+    <div class="flip-card-back">
+       <h1>{{ card.title || card.name }}</h1>
+       <p>{{ card.original_title  || card.original_name}}</p>
+       <p><img :src="flagLang(card)" :alt="card.title"></p>
+       <p>{{card.vote_average/2}}</p>
+       <p class="star">
+         <i v-for="index in Math.ceil(card.vote_average/2)" :key="index" class="fas fa-star"></i>
+         <i v-for="index in Math.floor(5-card.vote_average/2)" :key="index" class="far fa-star"></i>
+       </p>
+    </div>
   </div>
+</div>
 
-  </div>
+</div>
 
+<!-- ------------------------------------------------- -->
 </template>
 
 <script>
@@ -56,12 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   div{
 
-       .star{
-           color: gold;
-         }
-        list-style: none;
-     
-   }
+ @import '@/assets/style/card.scss';
+ 
 </style>

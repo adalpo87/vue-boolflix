@@ -12,3 +12,9 @@ body {
     color: white;
     font-family: 'Roboto', sans-serif;
 }
+
+@media all and (max-width: 576px) {}
+
+@media all and (min-width: 768px) {}
+
+@media all and (min-width: 1200px) {}

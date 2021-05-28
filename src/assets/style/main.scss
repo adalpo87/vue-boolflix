@@ -1,0 +1,22 @@
+           main {
+               .main-card {
+                   display: flex;
+                   flex-wrap: wrap;
+                   margin: auto;
+                   margin-bottom: 30px;
+               }
+           }
+           
+           @media all and (max-width: 576px) {
+               main {
+                   width: 80%;
+                   margin: auto;
+                   h1 {
+                       font-size: 14px;
+                   }
+               }
+           }
+           
+           @media all and (min-width: 768px) {}
+           
+           @media all and (min-width: 1200px) {}
