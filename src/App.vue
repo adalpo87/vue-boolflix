@@ -5,7 +5,6 @@
      />
     <Main v-if="results.movie.length > 0" type='movie' :list="results.movie" />
     <Main v-if="results.tv.length > 0" type='tv' :list="results.tv" />
-    <Main v-if="results.all.length > 0" type='all' :list="results.all" />
 
   </div>
 </template>
@@ -79,4 +78,5 @@ created(){
 
 <style lang="scss">
 @import '@/assets/style/general.scss';
+
 </style>

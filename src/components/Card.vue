@@ -4,7 +4,7 @@
 
   <div class="poster"><img :src="getPoster(card)" alt=""></div>
 
-  <h2>{{ card.title}}</h2>
+  <h2>{{ card.title || card.name }}</h2>
 
   <h4>{{ card.original_title  || card.original_name}}</h4>
 
@@ -34,8 +34,6 @@ export default {
         let lang = card.original_language
         if(lang =='en'){
           lang='us'
-        }if(lang =='it'){
-          lang ='it'
         }
         return "https://www.countryflags.io/"+lang+ "/flat/64.png"
       },
