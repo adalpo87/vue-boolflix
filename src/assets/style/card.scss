@@ -64,6 +64,10 @@ div {
     background-color: #141414;
     color: white;
     transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media all and (max-width: 767px) {
