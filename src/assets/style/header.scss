@@ -1,10 +1,9 @@
 header {
-    height: 100px;
-    div {
-        h1 {
-            color: red;
-            font-weight: 800;
-        }
+    height: 120px;
+    h1 {
+        color: #CA0A12;
+        font-weight: 800;
+        margin: 20px 0px;
     }
     div {
         input {
@@ -16,11 +15,18 @@ header {
             background-color: #141414;
             border: none;
             color: white;
+            transition: all .2s;
+            &:hover {
+                color: #CA0A12;
+                border-color: #CA0A12;
+                transform: scale(1.2, 1.2);
+                ;
+            }
         }
     }
 }
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 767px) {
     header {
         width: 90%;
         margin: auto;
@@ -28,7 +34,7 @@ header {
         h1 {
             margin: 5px;
         }
-        div {
+        .header-dp {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -46,6 +52,11 @@ header {
     }
 }
 
-@media all and (max-width: 768px) {}
+@media all and (min-width: 768px) {
+    header {
+        width: 90%;
+        margin: auto;
+    }
+}
 
-@media all and (max-width: 1200px) {}
+@media all and (min-width: 1200px) {}

@@ -1,22 +1,35 @@
            main {
-               .main-card {
+               margin: auto;
+               h1 {
+                   color: #CA0A12;
+               }
+               .main-c {
                    display: flex;
                    flex-wrap: wrap;
-                   margin: auto;
-                   margin-bottom: 30px;
+                   justify-content: space-evenly;
                }
            }
            
-           @media all and (max-width: 576px) {
+           @media all and (max-width: 767px) {
                main {
-                   width: 80%;
-                   margin: auto;
+                   width: 90%;
                    h1 {
-                       font-size: 14px;
+                       font-size: 1rem;
+                       display: inline-block;
+                       margin-bottom: 20px;
                    }
                }
            }
            
-           @media all and (min-width: 768px) {}
+           @media all and (min-width: 768px) {
+               main {
+                   width: 90%;
+                   h1 {
+                       font-size: 1.3rem;
+                       display: inline-block;
+                       margin-bottom: 30px;
+                   }
+               }
+           }
            
            @media all and (min-width: 1200px) {}

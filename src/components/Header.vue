@@ -1,12 +1,12 @@
 <template>
   <header>
-     <div>
+     
          <h1>BOOLFLIX</h1>
-    </div>
+    
     
  
  
-      <div>
+      <div class="header-dp">
           <input 
           v-model.trim="textSearch"
           placeholder="Cerca film o serie tv"

@@ -3,7 +3,9 @@
     <Header
     @startSearch= startSearch
      />
+    
     <Main v-if="results.movie.length > 0" type='movie' :list="results.movie" />
+ 
     <Main v-if="results.tv.length > 0" type='tv' :list="results.tv" />
 
   </div>

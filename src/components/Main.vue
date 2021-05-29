@@ -3,7 +3,7 @@
 
     <h1>{{titles[type]}}</h1>
      <span> {{ list.length }} </span> 
-    <div class="main-card">
+    <div class="main-c">
     <Card
     v-for="card in list" :key="card.id"
     :card="card"
