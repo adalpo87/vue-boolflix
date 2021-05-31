@@ -1,7 +1,7 @@
 <template>
   <header>
      
-         <h1>BOOLFLIX</h1>
+         <h1 @click="reset">BOOLFLIX</h1>
     
     
  
@@ -17,7 +17,7 @@
         @click="$emit('startSearch',{text:textSearch, type:'movie'})"
         class="ms-3">CERCA FILM</button>
         
-        
+         
         <button 
         @click="$emit('startSearch',{text:textSearch, type:'tv'})"
         class="ms-3">CERCA SERIE</button>
@@ -40,6 +40,9 @@ export default {
     name:'Header',
 components:{
 
+},
+props:{
+  reset: Function
 },
 data(){
     return{
