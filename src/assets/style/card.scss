@@ -18,7 +18,8 @@ div {
     &:hover {
         transform: scale(1.2, 1.2);
         filter: brightness(130%);
-        box-shadow: 0 5px 10px rgba($color: #CA0A12, $alpha: 0.8);
+        border: 1px solid white;
+        /*  box-shadow: 0 5px 10px rgba($color: #CA0A12, $alpha: 0.8); */
     }
 }
 

@@ -1,12 +1,11 @@
 <template>
 <main>
-
     <h1>{{titles[type]}}</h1>
      <span> {{ list.length }} </span> 
     <div class="main-c">
     <Card
-    v-for="card in list" :key="card.id"
-    :card="card"
+    v-for="poster in list" :key="poster.id"
+    :card="poster"
     />
     </div>
 </main>
@@ -28,7 +27,8 @@ data(){
         titles:{
             'movie': 'Film trovati:',
             'tv': 'Serie TV trovate:',
-            'all': 'Ecco tutti i risultati:',
+            'popularMovie': 'I film del momento:',
+            'popularTv': 'Serie TV del momento:'
         }
     }
 }
