@@ -5,11 +5,13 @@
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-    <img class="poster" :src="getPoster(card)" :alt="card.title || card.name">
+    <img v-if="card.poster_path !== null" class="poster" :src="getPoster(card)" :alt="card.title || card.name">
+    <h2 v-if="card.poster_path === null" >{{ card.title || card.name }}</h2>
     </div>
     <div class="flip-card-back">
-       <h1>{{ card.title || card.name }}</h1>
+       <h1 >{{ card.title || card.name }}</h1>
        <p>{{ card.original_title  || card.original_name}}</p>
+       <p>{{ card.overview }}</p>
        <p>Nazione:  <img :src="flagLang(card)" :alt="card.title"></p>
        <p>{{card.vote_average/2}}</p>
        <p class="star">
@@ -22,7 +24,7 @@
 
 </div>
 
-<!-- ------------------------------------------------- -->
+<!-- --------------------------------------------------->
 </template>
 
 <script>

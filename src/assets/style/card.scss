@@ -17,8 +17,8 @@ div {
     margin-bottom: 40px;
     transition: all .3s;
     &:hover {
-        transform: scale(1.2, 1.2);
-        filter: brightness(130%);
+        transform: scale(1.1, 1.1);
+        filter: brightness(150%);
         border: 1px solid white;
         /*  box-shadow: 0 5px 10px rgba($color: #CA0A12, $alpha: 0.8); */
     }
@@ -59,7 +59,7 @@ div {
 
 .flip-card-front {
     background-color: #141414;
-    color: black;
+    color: white;
 }
 
 .flip-card-back {
@@ -74,8 +74,8 @@ div {
 
 @media all and (max-width: 767px) {
     .main-card {
-        width: 90px;
-        height: 134px;
+        width: 180px;
+        height: 268px;
         margin: 16px 9px;
     }
     .flip-card-back {
@@ -93,8 +93,8 @@ div {
 
 @media all and (min-width: 768px) {
     .main-card {
-        width: 135px;
-        height: 201px;
+        width: 270px;
+        height: 402px;
         margin: 16px 9px;
     }
     .flip-card-back {
