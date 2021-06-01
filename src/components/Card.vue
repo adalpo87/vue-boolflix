@@ -5,7 +5,7 @@
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-    <img class="poster" :src="getPoster(card)" alt="">
+    <img class="poster" :src="getPoster(card)" :alt="card.title || card.name">
     </div>
     <div class="flip-card-back">
        <h1>{{ card.title || card.name }}</h1>

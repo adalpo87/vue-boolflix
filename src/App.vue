@@ -6,8 +6,8 @@
     
     <Main v-if="results.movie.length > 0" type='movie' :list="results.movie" />
     <Main v-if="results.tv.length > 0" type='tv' :list="results.tv" />
-    <Main v-if="results.movie.length  === 0" type='popularMovie' :list="results.popularMovie" />
-    <Main v-if="results.tv.length  === 0" type='popularTv' :list="results.popularTv" />
+    <Main v-if="results.movie.length === 0" type='popularMovie' :list="results.popularMovie" />
+    <Main v-if="results.tv.length === 0" type='popularTv' :list="results.popularTv" />
       <!-- creo una pagina alternativa a main con v-if="results.tv.length === 0  -->
    
   </div>
