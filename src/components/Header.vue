@@ -1,7 +1,7 @@
 <template>
   <header>
      
-         <h1 @click="reset">BOOLFLIX</h1>
+         <h1 @click="reset, resetText()">BOOLFLIX</h1>
     
     
  
@@ -14,17 +14,17 @@
           type="text" />
         
         <button 
-        @click="$emit('startSearch',{text:textSearch, type:'movie'})"
+        @click="$emit('startSearch',{text:textSearch, type:'movie'}),resetText()"
         class="ms-3">CERCA FILM</button>
         
          
         <button 
-        @click="$emit('startSearch',{text:textSearch, type:'tv'})"
+        @click="$emit('startSearch',{text:textSearch, type:'tv'}),resetText()"
         class="ms-3">CERCA SERIE</button>
       
        
         <button 
-        @click="$emit('startSearch',{text:textSearch, type:'all'})"
+        @click="$emit('startSearch',{text:textSearch, type:'all'}),resetText()"
         class="ms-3">CERCA TUTTO</button>
               
       </div>
@@ -48,6 +48,13 @@ data(){
     return{
         textSearch: '',
     }
+},
+methods:{
+  resetText(){
+    let reset = '';
+    this.textSearch = reset;
+    return this.textSearch 
+  }
 }
 }
 </script>
