@@ -70,6 +70,25 @@ div {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
+}
+
+.flip-card-back h1 {
+    color: #ac3838;
+}
+
+.flip-card-back::-webkit-scrollbar {
+    width: 12px;
+    background-color: lightgrey;
+}
+
+.flip-card-back::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.flip-card-back::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(39, 38, 38);
 }
 
 @media all and (max-width: 767px) {
@@ -99,8 +118,8 @@ div {
     }
     .flip-card-back {
         h1 {
+            margin-top: 40px;
             font-size: 1rem;
-            margin: 5px;
         }
         p {
             font-size: 0.7rem;
