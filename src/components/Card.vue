@@ -6,7 +6,14 @@
   <div class="flip-card-inner">
     <div class="flip-card-front">
     <img v-if="card.poster_path !== null" class="poster" :src="getPoster(card)" :alt="card.title || card.name">
-    <h2 v-if="card.poster_path === null" >{{ card.title || card.name }}</h2>
+    <div v-if="card.poster_path === null">
+    <h2>{{ card.title || card.name }}</h2>
+    <p>Nazione:  <img :src="flagLang(card)" :alt="card.title"></p>
+    <p v-if="card.vote_average !== 0" class="star">
+         <i v-for="index in Math.ceil(card.vote_average/2)" :key="index" class="fas fa-star"></i>
+         <i v-for="index in Math.floor(5-card.vote_average/2)" :key="index" class="far fa-star"></i>
+       </p>
+    </div>
     </div>
     <div class="flip-card-back">
        <h1 >{{ card.title || card.name }}</h1>
